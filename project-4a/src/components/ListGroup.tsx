@@ -1,8 +1,20 @@
 // import { MouseEvent } from "react";
 import { useState } from "react";
 
-function ListGroup() {
-  const items = ["New York", "San Francisco", "Tokyo", "Lodon", "Paris"];
+// Instead of hardcoding items and h1, we should be able to pass these in as variables
+// {items: [], heading: string}
+// this is done using an interface - most just call it Props but you can put a name in there
+// like ListGroupProps
+// This gets passed into the function as props: Props
+// However, this causes a failure in the App.tsx file since it is now expecting props
+// props: Props gets changed to {items, heading} to destructure it and make code nicer
+interface Props {
+  items: string[];
+  heading: string;
+}
+
+function ListGroup({ items, heading }: Props) {
+  // const items = ["New York", "San Francisco", "Tokyo", "Lodon", "Paris"];
   // items = [];
   // if (items.length == 0)
   //   return (
@@ -27,7 +39,7 @@ function ListGroup() {
 
   return (
     <>
-      <h1>List Group</h1>
+      <h1>{heading}</h1>
       {/* {items.length == 0 ? <p>No items found</p> : null} */}
       {/* {message} */
       /* goes with the const message above*/}

@@ -36,11 +36,17 @@
 
 // Import the function(s) needed.  Note that ./ = the same folder
 //import Message from './Message';
-import ListGroup from './components/ListGroup';
+import ListGroup from "./components/ListGroup";
 
 function App() {
   //return <div><Message /></div>;
-  return <div><ListGroup /></div>;
+  // these props are adding in for the change we made to ListGroup
+  const items = ["New York", "San Francisco", "Tokyo", "Lodon", "Paris"];
+  return (
+    <div>
+      <ListGroup items={items} heading="Cities" />
+    </div>
+  );
 }
 
 export default App;
