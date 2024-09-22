@@ -36,6 +36,7 @@
 
 // Import the function(s) needed.  Note that ./ = the same folder
 //import Message from './Message';
+import Alert from "./components/Alert";
 import ListGroup from "./components/ListGroup";
 
 function App() {
@@ -53,6 +54,7 @@ function App() {
         heading="Cities"
         onSelectItem={handleSelectItem}
       />
+      <Alert text="Unicorns are awesome!" />
     </div>
   );
 }
