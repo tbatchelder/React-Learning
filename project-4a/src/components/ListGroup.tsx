@@ -11,9 +11,11 @@ import { useState } from "react";
 interface Props {
   items: string[];
   heading: string;
+  // (item: string) => void so it doesn't return a value
+  onSelectItem: (item: string) => void;
 }
 
-function ListGroup({ items, heading }: Props) {
+function ListGroup({ items, heading, onSelectItem }: Props) {
   // const items = ["New York", "San Francisco", "Tokyo", "Lodon", "Paris"];
   // items = [];
   // if (items.length == 0)
@@ -68,6 +70,7 @@ function ListGroup({ items, heading }: Props) {
             // onClick={handleClick}
             onClick={() => {
               setSelectedIndex(index);
+              onSelectItem(item);
             }}
           >
             {item}

@@ -42,9 +42,17 @@ function App() {
   //return <div><Message /></div>;
   // these props are adding in for the change we made to ListGroup
   const items = ["New York", "San Francisco", "Tokyo", "Lodon", "Paris"];
+
+  const handleSelectItem = (item: string) => {
+    console.log(item);
+  };
   return (
     <div>
-      <ListGroup items={items} heading="Cities" />
+      <ListGroup
+        items={items}
+        heading="Cities"
+        onSelectItem={handleSelectItem}
+      />
     </div>
   );
 }
