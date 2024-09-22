@@ -54,7 +54,9 @@ function App() {
         heading="Cities"
         onSelectItem={handleSelectItem}
       />
-      <Alert text="Unicorns are awesome!" />
+      <Alert>
+        Unicorns are <span>awesome!</span>
+      </Alert>
     </div>
   );
 }
