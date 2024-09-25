@@ -36,7 +36,8 @@
 
 // Import the function(s) needed.  Note that ./ = the same folder
 //import Message from './Message';
-// import Alert from "./components/Alert";
+import { useState } from "react";
+import Alert from "./components/Alert";
 // import ListGroup from "./components/ListGroup";
 
 import Buttons from "./components/Buttons";
@@ -49,11 +50,15 @@ function App() {
   // const handleSelectItem = (item: string) => {
   // console.log(item);
   // };
+  const [alertVisible, setAlertVisibility] = useState(false);
 
   const bName = "Count Chocula";
 
   return (
     <div>
+      {alertVisible && (
+        <Alert onClose={() => setAlertVisibility(false)}>My Alert</Alert>
+      )}
       {/* <ListGroup
         items={items}
         heading="Cities"
@@ -64,7 +69,7 @@ function App() {
       </Alert> */}
       {
         <Buttons
-          onClick={() => console.log("Clicked")}
+          onClick={() => setAlertVisibility(true)}
           children={bName}
           color="success"
         ></Buttons>

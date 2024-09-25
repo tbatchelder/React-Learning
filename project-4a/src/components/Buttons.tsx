@@ -8,11 +8,13 @@ function Buttons({ children, color = "primary", onClick }: Props) {
   // const bName = "Booberry";
 
   return (
-    <div>
-      <button type="button" className={"btn btn-" + color} onClick={onClick}>
-        {children}
-      </button>
-    </div>
+
+      <div>
+        
+        <button type="button" className={"btn btn-" + color} onClick={onClick}>
+          {children}
+        </button>
+      </div>
   );
 }
 
