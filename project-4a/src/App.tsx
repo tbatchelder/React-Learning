@@ -36,27 +36,39 @@
 
 // Import the function(s) needed.  Note that ./ = the same folder
 //import Message from './Message';
-import Alert from "./components/Alert";
-import ListGroup from "./components/ListGroup";
+// import Alert from "./components/Alert";
+// import ListGroup from "./components/ListGroup";
+
+import Buttons from "./components/Buttons";
 
 function App() {
   //return <div><Message /></div>;
   // these props are adding in for the change we made to ListGroup
-  const items = ["New York", "San Francisco", "Tokyo", "Lodon", "Paris"];
+  // const items = ["New York", "San Francisco", "Tokyo", "Lodon", "Paris"];
 
-  const handleSelectItem = (item: string) => {
-    console.log(item);
-  };
+  // const handleSelectItem = (item: string) => {
+  // console.log(item);
+  // };
+
+  const bName = "Count Chocula";
+
   return (
     <div>
-      <ListGroup
+      {/* <ListGroup
         items={items}
         heading="Cities"
         onSelectItem={handleSelectItem}
       />
       <Alert>
         Unicorns are <span>awesome!</span>
-      </Alert>
+      </Alert> */}
+      {
+        <Buttons
+          onClick={() => console.log("Clicked")}
+          children={bName}
+          color="success"
+        ></Buttons>
+      }
     </div>
   );
 }
